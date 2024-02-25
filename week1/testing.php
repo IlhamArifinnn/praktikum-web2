@@ -13,7 +13,8 @@
       $prodi = "Teknik Informatika";
       $angkatan = 2023;
 
-      echo "hello $nama";
+      echo "hello $nama <br/>";
+      echo 'halo ' . $nama
 
       ?>
 
