@@ -85,7 +85,7 @@
                   $harga_mesin_cuci = 3800000;
 
                   $produk = isset($_POST['radio']) ? $_POST['radio'] : '';
-                  $jumlah = isset($_POST['jumlah']) ? $_POST['jumlah'] : 0;
+                  $jumlah = isset($_POST['jumlah']) ? $_POST['jumlah'] : '';
                   $total = 0;
 
                   switch ($produk) {
