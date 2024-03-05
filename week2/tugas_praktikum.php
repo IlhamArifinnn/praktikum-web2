@@ -75,9 +75,9 @@
             <hr>
 
             <div>
-                  <p>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
-                  <p>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
-                  <p>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
+                  <p>Nama Costumer: <? echo isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
+                  <p>Produk Pilihan: <? echo isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
+                  <p>Jumlah Beli: <? echo isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
                   <?php
                   // Menghitung total belanja
                   $harga_tv = 4200000;
@@ -103,7 +103,7 @@
                               break;
                   }
                   ?>
-                  <p>Total Belanja: <?= number_format($total, 0, ',', '.'); ?></p>
+                  <p>Total Belanja: <? echo number_format($total, 0, ',', '.'); ?></p>
             </div>
 
       </div>
