@@ -13,13 +13,13 @@
 
 <body>
 
-      <div class="container-fluid">
+      <div class="container">
             <div class="row">
                   <div class="col-md-8">
-                        <h1>Belanja Online</h1>
+                        <h1 class="mt-2">Belanja Online</h1>
                         <hr>
 
-                        <form action="tugas_praktikum.php" method="post">
+                        <form action="tugas_praktikum.php" method="post" class='p-2'>
                               <div class="form-group row">
                                     <label for="costumer" class="col-4 col-form-label">Costumer</label>
                                     <div class="col-8">
@@ -55,6 +55,7 @@
                                     </div>
                               </div>
                         </form>
+                        <hr>
                   </div>
                   <div class="col-md-4">
                         <div class="border rounded">
@@ -66,45 +67,46 @@
                                     <p class="border-bottom py-1 mx-3">Kulkas : 3.100.000</p>
                                     <p class="border-bottom py-1 mx-3">Mesin Cuci : 3.800.000</p>
                               </div>
-                              <div class="bg-primary py-3 rounded">
+                              <div class="bg-secondary py-3 rounded">
                                     <h6 class="text-white mx-3">Harga dapat berubah setiap saat</h6>
                               </div>
                         </div>
+                        <div class="mt-4 p-2">
+                              <h3 class="border-bottom py-2">Daftar Harga</h3>
+                              <p class='border p-2 rounded'>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
+                              <p class='border p-2 rounded'>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
+                              <p class='border p-2 rounded'>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
+                              <?php
+                              // Menghitung total belanja
+                              $harga_tv = 4200000;
+                              $harga_kulkas = 3100000;
+                              $harga_mesin_cuci = 3800000;
+
+                              $produk = isset($_POST['radio']) ? $_POST['radio'] : '';
+                              $jumlah = isset($_POST['jumlah']) ? $_POST['jumlah'] : '';
+                              $total = 0;
+
+                              switch ($produk) {
+                                    case 'TV':
+                                          $total = $harga_tv * $jumlah;
+                                          break;
+                                    case 'Kulkas':
+                                          $total = $harga_kulkas * $jumlah;
+                                          break;
+                                    case 'Mesin Cuci':
+                                          $total = $harga_mesin_cuci * $jumlah;
+                                          break;
+                                    default:
+                                          $total = 0;
+                                          break;
+                              }
+                              ?>
+                              <p class='border p-2 rounded'>Total Belanja: <?= number_format($total, 0, ',', '.'); ?></p>
+                        </div>
                   </div>
             </div>
-            <hr>
 
-            <div>
-                  <p>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
-                  <p>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
-                  <p>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
-                  <?php
-                  // Menghitung total belanja
-                  $harga_tv = 4200000;
-                  $harga_kulkas = 3100000;
-                  $harga_mesin_cuci = 3800000;
 
-                  $produk = isset($_POST['radio']) ? $_POST['radio'] : '';
-                  $jumlah = isset($_POST['jumlah']) ? $_POST['jumlah'] : '';
-                  $total = 0;
-
-                  switch ($produk) {
-                        case 'TV':
-                              $total = $harga_tv * $jumlah;
-                              break;
-                        case 'Kulkas':
-                              $total = $harga_kulkas * $jumlah;
-                              break;
-                        case 'Mesin Cuci':
-                              $total = $harga_mesin_cuci * $jumlah;
-                              break;
-                        default:
-                              $total = 0;
-                              break;
-                  }
-                  ?>
-                  <p>Total Belanja: <?= number_format($total, 0, ',', '.'); ?></p>
-            </div>
 
       </div>
 
