@@ -51,12 +51,13 @@
                               </div>
                               <div class="form-group row">
                                     <div class="offset-4 col-8">
-                                          <button name="submit" type="submit" class="btn btn-success">Kirim</button>
+                                          <button name="submit" type="submit" class="btn btn-success">Pesan</button>
                                     </div>
                               </div>
                         </form>
                         <hr>
                   </div>
+
                   <div class="col-md-4">
                         <div class="border rounded">
                               <div class="bg-primary py-3 rounded">
@@ -72,7 +73,7 @@
                               </div>
                         </div>
                         <div class="mt-4 p-2">
-                              <h3 class="border-bottom py-2">Daftar Harga</h3>
+                              <h3 class="border-bottom py-2">Harga</h3>
                               <p class='border p-2 rounded'>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
                               <p class='border p-2 rounded'>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
                               <p class='border p-2 rounded'>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
