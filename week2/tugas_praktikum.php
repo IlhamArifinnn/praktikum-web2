@@ -34,12 +34,16 @@
                                                 <label for="radio_0" class="custom-control-label">TV</label>
                                           </div>
                                           <div class="custom-control custom-radio custom-control-inline">
-                                                <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="Kulkas" required="required">
-                                                <label for="radio_1" class="custom-control-label">Kulkas</label>
+                                                <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="AC" required="required">
+                                                <label for="radio_1" class="custom-control-label">AC</label>
                                           </div>
                                           <div class="custom-control custom-radio custom-control-inline">
-                                                <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="Mesin Cuci" required="required">
-                                                <label for="radio_2" class="custom-control-label">Mesin Cuci</label>
+                                                <input name="radio" id="radio_2" type="radio" class="custom-control-input" value="Kulkas" required="required">
+                                                <label for="radio_2" class="custom-control-label">Kulkas</label>
+                                          </div>
+                                          <div class="custom-control custom-radio custom-control-inline">
+                                                <input name="radio" id="radio_3" type="radio" class="custom-control-input" value="Mesin Cuci" required="required">
+                                                <label for="radio_3" class="custom-control-label">Mesin Cuci</label>
                                           </div>
                                     </div>
                               </div>
@@ -65,6 +69,7 @@
                               </div>
                               <div class="">
                                     <p class="border-bottom py-1 mx-3 mt-2">TV : 4.200.000</p>
+                                    <p class="border-bottom py-1 mx-3 mt-2">AC : 5.600.000</p>
                                     <p class="border-bottom py-1 mx-3">Kulkas : 3.100.000</p>
                                     <p class="border-bottom py-1 mx-3">Mesin Cuci : 3.800.000</p>
                               </div>
@@ -72,7 +77,8 @@
                                     <h6 class="text-white mx-3">Harga dapat berubah setiap saat</h6>
                               </div>
                         </div>
-                        <div class="mt-4 p-2">
+
+                        <div class="mt-4 p-2 border rounded">
                               <h3 class="border-bottom py-2">Harga</h3>
                               <p class='border p-2 rounded'>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
                               <p class='border p-2 rounded'>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
@@ -80,6 +86,7 @@
                               <?php
                               // Menghitung total belanja
                               $harga_tv = 4200000;
+                              $harga_ac = 5600000;
                               $harga_kulkas = 3100000;
                               $harga_mesin_cuci = 3800000;
 
@@ -90,6 +97,9 @@
                               switch ($produk) {
                                     case 'TV':
                                           $total = $harga_tv * $jumlah;
+                                          break;
+                                    case 'AC':
+                                          $total = $harga_ac * $jumlah;
                                           break;
                                     case 'Kulkas':
                                           $total = $harga_kulkas * $jumlah;
