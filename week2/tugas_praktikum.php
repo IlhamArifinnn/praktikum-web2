@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="mt-4 p-2 border rounded">
-                              <h3 class="border-bottom py-2">Harga</h3>
+                              <h3 class="border-bottom py-2">Struk Pembayaran</h3>
                               <p class='border p-2 rounded'>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
                               <p class='border p-2 rounded'>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
                               <p class='border p-2 rounded'>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
