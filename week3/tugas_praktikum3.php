@@ -1,12 +1,12 @@
 <?php
 
-$nama = $_POST['nama'];
-$skill = $_POST['skill'];
-$nim = $_POST['nim'];
-$jenisKelamin = $_POST['jenis_kelamin'];
-$domisili = $_POST['domisili'];
-$prodi = $_POST['prodi'];
-$email = $_POST['email'];
+$nama = $_POST['nama'] ?? '';
+$skill = $_POST['skill'] ?? [];
+$nim = $_POST['nim'] ?? '';
+$jenisKelamin = $_POST['jenis_kelamin'] ?? '';
+$domisili = $_POST['domisili'] ?? '';
+$prodi = $_POST['prodi'] ?? '';
+$email = $_POST['email'] ?? '';
 $skor = 0;
 
 
@@ -22,27 +22,26 @@ foreach ($skill as $s) {
                break;
 
           case 'javascript':
-               $skor += 10;
+               $skor += 20;
                break;
 
           case 'bootstrap':
-               $skor += 10;
+               $skor += 20;
                break;
 
           case 'php':
-               $skor += 10;
+               $skor += 30;
                break;
 
           case 'python':
-               $skor += 10;
+               $skor += 30;
                break;
 
           case 'java':
-               $skor += 10;
+               $skor += 50;
                break;
 
           default:
-               # code...
                break;
      }
 }
@@ -88,7 +87,7 @@ if ($skor >= 100 && $skor <= 150) {
                <div class="form-group row">
                     <label for="nama" class="col-4 col-form-label font-weight-bold">Nama Lengkap</label>
                     <div class="col-8">
-                         <input id="nama" name="nama" type="text" class="form-control">
+                         <input id="nama" name="nama" type="text" class="form-control" placeholder="Nama Lengkap">
                     </div>
                </div>
                <div class="form-group row">
@@ -100,7 +99,7 @@ if ($skor >= 100 && $skor <= 150) {
                          </div>
                          <div class="custom-control custom-radio custom-control-inline">
                               <input name="jenis_kelamin" id="jk_1" type="radio" class="custom-control-input" value="Perempuan">
-                              <label for="jk_1" class="custom-control-label">Perempuan</label>+--
+                              <label for="jk_1" class="custom-control-label">Perempuan</label>
                          </div>
                     </div>
                </div>
@@ -108,6 +107,7 @@ if ($skor >= 100 && $skor <= 150) {
                     <label for="prodi" class="col-4 col-form-label font-weight-bold">Program Studi</label>
                     <div class="col-8">
                          <select id="prodi" name="prodi" class="custom-select">
+                              <option value="">Pilih Program Studi</option>
                               <option value="Teknik Informatika">Teknik Informatika</option>
                               <option value="Sistem Informasi">Sistem Informasi</option>
                               <option value="Bisnis Digital">Bisnis Digital</option>
@@ -151,6 +151,7 @@ if ($skor >= 100 && $skor <= 150) {
                     <label for="domisili" class="col-4 col-form-label font-weight-bold">Tempat Domisili</label>
                     <div class="col-8">
                          <select id="domisili" name="domisili" class="custom-select">
+                              <option value="">Pilih Kota Domisili</option>
                               <option value="Jakarta">Jakarta</option>
                               <option value="Depok">Depok</option>
                               <option value="Bogor">Bogor</option>
@@ -183,7 +184,7 @@ if ($skor >= 100 && $skor <= 150) {
           echo "Program Studi : " . $prodi . "<br>";
           echo "Skill : ";
           foreach ($skill as $s) {
-               echo $s . ",";
+               echo $s . ", ";
           }
           echo "<br> Skor : " . $skor . "<br>";
           echo "Domisili : " . $domisili . "<br>";

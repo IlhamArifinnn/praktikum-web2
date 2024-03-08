@@ -1,9 +1,9 @@
 <?php
 if (isset($_POST['submit'])) {
-      $nama = $_POST['nama'];
-      $jk = $_POST['jk'];
-      $hobi = $_POST['hobi'];
-      $ipk = $_POST['ipk'];
+      $nama = $_POST['nama'] ?? '';
+      $jk = $_POST['jk'] ?? '';
+      $hobi = $_POST['hobi'] ?? [];
+      $ipk = $_POST['ipk'] ?? '';
 
       // buat fungsi status
       function cekStatus($ipk)
