@@ -19,7 +19,7 @@
                         <h1 class="mt-2">Belanja Online</h1>
                         <hr>
 
-                        <form action="tugas_praktikum.php" method="post" class='p-2'>
+                        <form action="tugas_praktikum2.php" method="post" class='p-2'>
                               <div class="form-group row">
                                     <label for="costumer" class="col-4 col-form-label">Costumer</label>
                                     <div class="col-8">
@@ -80,9 +80,9 @@
 
                         <div class="mt-4 p-2 border rounded">
                               <h3 class="border-bottom py-2">Struk Pembayaran</h3>
-                              <p class='border p-2 rounded'>Nama Costumer: <?= isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
-                              <p class='border p-2 rounded'>Produk Pilihan: <?= isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
-                              <p class='border p-2 rounded'>Jumlah Beli: <?= isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
+                              <p class='border p-2 rounded'>Nama Costumer: <?php isset($_POST['costumer']) ? $_POST['costumer'] : ''; ?></p>
+                              <p class='border p-2 rounded'>Produk Pilihan: <?php isset($_POST['radio']) ? $_POST['radio'] : ''; ?></p>
+                              <p class='border p-2 rounded'>Jumlah Beli: <?php isset($_POST['jumlah']) ? $_POST['jumlah'] : ''; ?></p>
                               <?php
                               // Menghitung total belanja
                               $harga_tv = 4200000;
