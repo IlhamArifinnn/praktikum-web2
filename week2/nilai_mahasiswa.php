@@ -80,7 +80,7 @@ switch ($grade) {
             </div>
             <div class="row">
                   <div class="col-md-12">
-                        <a href="form.php" class="btn btn-primary mb-2" name="kirim"><- Kembali</a>
+                        <a href="form_mahasiswa.php" class="btn btn-primary mb-2" name="kirim"><- Kembali</a>
                                     <table class="table table-dark">
                                           <thead>
                                                 <tr>

@@ -60,7 +60,7 @@
                     <div class="form-group row">
                         <div class="offset-2">
                             <div class="col-sm-12">
-                                <button type="submit" class="btn btn-danger" name="batal">Batal</button>
+                                <button type="reset" class="btn btn-danger" name="batal">Batal</button>
                                 <button type="submit" class="btn btn-primary" name="kirim">Kirim</button>
                             </div>
                         </div>
