@@ -15,7 +15,7 @@
       echo "LOOPING PERTAMA: <br>";
       for ($x = 1; $x <= 20; $x++) {
             if ($x % 2 == 0) {
-                  echo "$x - STT Nurul Fikri<br>";
+                  echo "iterasi ke-$x - STT Nurul Fikri<br>";
             }
       }
 
@@ -24,14 +24,12 @@
       // Lakukan Looping Kedua Di Sini
       for ($x = 20; $x >= 1; $x--) {
             if ($x % 2 == 0) {
-                  echo "$x  Ilham Arifin<br>";
+                  echo "iterasi ke-$x  : Ilham Arifin<br>";
             }
       }
       ?>
 
-      <?php
-      echo "<h3>Soal No 2 Function Tentukan Nilai</h3>";
-      ?>
+      <?php echo "<h3>Soal No 2 Function Tentukan Nilai</h3>"; ?>
       <p>Masukan Nilai: </p>
       <form action="tugas_praktikum3.php" method="post">
             <input type="number" name="nilai" id="nilai" placeholder="Masukan nilai anda">

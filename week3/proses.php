@@ -10,7 +10,7 @@ $email = $_POST['email'] ?? '';
 $skor = 0;
 
 
-// buat logic nentuin skor dari skill
+// logic nentuin skor dari skill
 foreach ($skill as $s) {
       switch ($s) {
             case 'html':
@@ -46,6 +46,7 @@ foreach ($skill as $s) {
       }
 }
 
+// grade dari skor
 $kategori_skill;
 if ($skor >= 100 && $skor <= 150) {
       $kategori_skill = "Sangat Baik";
