@@ -79,14 +79,14 @@ require_once 'header.php';
       </form>
       <hr>
       <?php
-      echo "Nama : " . $nama . "<br>";
-      echo "Jenis Kelamin : " . $jk . "<br>";
-      echo "Hobi : ";
+      echo "Nama : " . $nama . "<br>" ?? "";
+      echo "Jenis Kelamin : " . $jk . "<br>" ?? "";
+      echo "Hobi : " ?? "";
       foreach ($hobi as $h) {
             echo $h . ", ";
       }
-      echo "<br> IPK : " . $ipk;
-      echo "<br> Status : " . $status;
+      echo "<br> IPK : " . $ipk ?? "";
+      echo "<br> Status : " . $status ?? "";
       ?>
 </div>
 
