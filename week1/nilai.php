@@ -41,12 +41,12 @@ $kumpulan_nilai = [$nilai1, $nilai2, $nilai3, $nilai4];
                         foreach ($kumpulan_nilai as $nilai) : ?>
                               <tr>
                                     <?php $nilai_akhir = ($nilai["uts"] + $nilai["uas"] + $nilai["tugas"]) / 3; ?>
-                                    <td><? echo $nomor; ?></td>
-                                    <td><? echo $nilai["nim"]; ?></td>
-                                    <td><? echo $nilai["uas"]; ?></td>
-                                    <td><? echo $nilai["uts"]; ?></td>
-                                    <td><? echo $nilai["tugas"]; ?></td>
-                                    <td><? echo number_format($nilai_akhir, 2, ",", ".") ?></td>
+                                    <td><?= $nomor; ?></td>
+                                    <td><?= $nilai["nim"]; ?></td>
+                                    <td><?= $nilai["uas"]; ?></td>
+                                    <td><?= $nilai["uts"]; ?></td>
+                                    <td><?= $nilai["tugas"]; ?></td>
+                                    <td><?= number_format($nilai_akhir, 2, ",", ".") ?></td>
                               </tr>
                               <?php $nomor++ ?>
                         <?php endforeach; ?>
