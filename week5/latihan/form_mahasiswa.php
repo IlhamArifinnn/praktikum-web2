@@ -36,6 +36,7 @@
                         <option value="Basis Data">Basis Data</option>
                         <option value="Dasar-Dasar Pemrograman">Dasar-Dasar Pemrograman</option>
                         <option value="Komunikasi Efektif">Komunikasi Efektif</option>
+                        <option value="Bahasa Inggris">Bahasa Inggris</option>
                     </select>
                 </div>
             </div>
