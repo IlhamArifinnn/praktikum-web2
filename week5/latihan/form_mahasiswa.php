@@ -17,6 +17,7 @@
 <body>
     <div class="container">
         <h1 class="text-center">Form Nilai Ujian</h1>
+        <hr>
         <form method="POST" action="form_mahasiswa.php">
             <div class="form-group row">
                 <label for="nim" class="col-4 col-form-label">NIM</label>
@@ -27,12 +28,14 @@
 
 
             <div class="form-group row">
-                <label for="matkul" class="col-4 col-form-label">Prodi</label>
+                <label for="matkul" class="col-4 col-form-label">Mata Kuliah</label>
                 <div class="col-8">
                     <select id="matkul" name="matkul" class="custom-select">
-                        <option value="Sistem Informasi">Sistem Informasi</option>
-                        <option value="Teknik Informatika">Teknik Informatika</option>
-                        <option value="Bisnis Digital">Bisnis Digital</option>
+                        <option value="">Pilih Mata Kuliah</option>
+                        <option value="Pemrograman Web">Pemrograman Web</option>
+                        <option value="Basis Data">Basis Data</option>
+                        <option value="Dasar-Dasar Pemrograman">Dasar-Dasar Pemrograman</option>
+                        <option value="Komunikasi Efektif">Komunikasi Efektif</option>
                     </select>
                 </div>
             </div>
@@ -60,7 +63,7 @@
             // Buat objek baru dari class bmiPasien
             $mahasiswa1 = new NilaiMahasiswa($nim, $matkul, $nilai);
 
-            echo "<h2>Nilai Mahasiswa</h2> . <br>";
+            echo "<h2>Nilai Mahasiswa</h2>  <br>";
             echo "<p>NIM: " . $mahasiswa1->nim . "</p>";
             echo "<p>Prodi: " . $mahasiswa1->matkul . "</p>";
             echo "<p>Hasil ujian: " . $mahasiswa1->hasil($nilai) . "</p>";

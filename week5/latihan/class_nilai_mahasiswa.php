@@ -4,19 +4,19 @@ class NilaiMahasiswa
 
     var $nim, $matkul, $nilai;
 
-    function __construct($nim, $matkul, $nilai)
+    public function __construct($nim, $matkul, $nilai)
     {
         $this->nim = $nim;
         $this->matkul = $matkul;
         $this->nilai = $nilai;
     }
 
-    function grade($nilai)
+    public function grade()
     {
-        return ($nilai > 56) ? "Lulus" : "Tidak lulus";
+        return ($this->nilai > 56) ? "Lulus" : "Tidak lulus";
     }
 
-    function hasil($nilai)
+    public function hasil($nilai)
     {
         if ($nilai >= 85 && $nilai <= 100) {
             return "A";
