@@ -68,7 +68,7 @@
             echo "<p>NIM: " . $mahasiswa1->nim . "</p>";
             echo "<p>Prodi: " . $mahasiswa1->matkul . "</p>";
             echo "<p>Hasil ujian: " . $mahasiswa1->hasil($nilai) . "</p>";
-            echo "<p>Grade ujian: " . $mahasiswa1->grade($nilai) . "</p>";
+            echo "<p>Grade ujian: " . $mahasiswa1->grade() . "</p>";
         }
         ?>
     </div>
