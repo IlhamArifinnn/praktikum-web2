@@ -17,7 +17,6 @@
 
 <body>
     <div class="container">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">PemWeb2</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,12 +66,11 @@
                 </div>
             </div>
 
-
             <div class="form-group row">
                 <label for="matkul" class="col-4 col-form-label">Mata Kuliah</label>
                 <div class="col-8">
                     <select id="matkul" name="matkul" class="custom-select">
-                        <option value="">Pilih Mata Kuliah</option>
+                        <option value="-">Pilih Mata Kuliah</option>
                         <option value="Pemrograman Web">Pemrograman Web</option>
                         <option value="Basis Data">Basis Data</option>
                         <option value="Dasar-Dasar Pemrograman">Dasar-Dasar Pemrograman</option>
