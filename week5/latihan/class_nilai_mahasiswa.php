@@ -11,9 +11,9 @@ class NilaiMahasiswa
         $this->nilai = $nilai;
     }
 
-    public function grade($nilai)
+    public function grade()
     {
-        return ($nilai > 56) ? "Lulus" : "Tidak lulus";
+        return ($this->nilai > 56) ? "Lulus" : "Tidak lulus";
     }
 
     public function hasil($nilai)

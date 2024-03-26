@@ -101,13 +101,13 @@
             $nilai = $_POST["nilai"];
 
             // Buat objek baru dari class bmiPasien
-            $mahasiswa1 = new NilaiMahasiswa($nim, $matkul, $nilai);
+            $mhs = new NilaiMahasiswa($nim, $matkul, $nilai);
 
             echo "<h2>Nilai Mahasiswa</h2>  <br>";
-            echo "<p>NIM: " . $mahasiswa1->nim . "</p>";
-            echo "<p>Prodi: " . $mahasiswa1->matkul . "</p>";
-            echo "<p>Hasil ujian: " . $mahasiswa1->hasil($nilai) . "</p>";
-            echo "<p>Grade ujian: " . $mahasiswa1->grade() . "</p>";
+            echo "<p>NIM: " . $mhs->nim . "</p>";
+            echo "<p>Prodi: " . $mhs->matkul . "</p>";
+            echo "<p>Hasil ujian: " . $mhs->hasil($nilai) . "</p>";
+            echo "<p>Grade ujian: " . $mhs->grade() . "</p>";
         }
         ?>
 
