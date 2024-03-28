@@ -2,7 +2,9 @@
 class NilaiMahasiswa
 {
 
-    var $nim, $matkul, $nilai;
+    var $nim;
+    var $matkul;
+    var $nilai;
 
     public function __construct($nim, $matkul, $nilai)
     {
@@ -11,9 +13,9 @@ class NilaiMahasiswa
         $this->nilai = $nilai;
     }
 
-    public function grade()
+    public function grade($nilai)
     {
-        return ($this->nilai > 56) ? "Lulus" : "Tidak lulus";
+        return ($nilai > 56) ? "Lulus" : "Tidak lulus";
     }
 
     public function hasil($nilai)
