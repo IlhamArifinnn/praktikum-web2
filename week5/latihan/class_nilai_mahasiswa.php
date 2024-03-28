@@ -2,9 +2,7 @@
 class NilaiMahasiswa
 {
 
-    var $nim;
-    var $matkul;
-    var $nilai;
+    var $nim, $matkul, $nilai;
 
     public function __construct($nim, $matkul, $nilai)
     {
